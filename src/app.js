@@ -30,7 +30,7 @@ app.post("/repositories", (request, response) => {
   return response.status(200).json(repository);
 });
 
-app.put("/repositories/:id", validateRepositoryId, (request, response, next) => {
+app.put("/repositories/:id", validateRepositoryId, (request, response) => {
   const { id } = request.params;
   const { title, url, techs } = request.body;
 
